@@ -29,6 +29,7 @@ export default function TaxCalculator(){
     const tax =useMemo(()=>{
         return calculateIncomeTax(income)
     },[income])
+    
     const netIncome = useMemo(() => {
         return income - tax;
     }, [income, tax]); // 依赖income和tax

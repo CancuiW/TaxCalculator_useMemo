@@ -1,12 +1,13 @@
 
 import './App.css';
-import TaxCalculator from './useMemo'
+//import TaxCalculator from './useMemo';
+import Calculator from './useCallback';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TaxCalculator />
+        <Calculator />
       </header>
     </div>
   );
