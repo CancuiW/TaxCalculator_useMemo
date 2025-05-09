@@ -25,7 +25,7 @@ function calculateIncomeTax(income){
 }
 
 export default function TaxCalculator(){
-    const [income,setIncome]=useState(0)
+    const [income,setIncome]=useState("")
     const tax =useMemo(()=>{
         return calculateIncomeTax(income)
     },[income])
@@ -42,12 +42,11 @@ export default function TaxCalculator(){
     return(
         <div>
             <h1>UK Income Tax Calculator</h1>
-            <div>
-                <input type="number"
+            <div >
+                <input type="text"
+                 style={{ width: "180px", padding: "8px 12px", }}
                     value={income}
                     onChange={handleIncomeChange}
-                    min="0"
-                    step="1000"
                     placeholder="Enter your annual income">
                 </input>
 
